@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="40px" version="1.1" viewBox="0 0 50 40" width="50px" xmlns="http://www.w3.org/2000/svg">
+    <title>soccer-field</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pitch-–-unselected" stroke="#3FAE2A" stroke-width="1.5"
+            transform="translate(-13.000000, -38.000000)">
+            <g id="soccer-field" transform="translate(14.000000, 39.000000)">
+                <ellipse cx="23.8679958" cy="18.8845681" id="Oval" rx="6.36479888"
+                    ry="6.29485603" stroke-linecap="square"></ellipse>
+                <polyline id="Path"
+                    points="0 11.0159981 9.54719831 11.0159981 9.54719831 26.7531381 0 26.7531381"></polyline>
+                <polyline id="Path"
+                    points="47.7359916 11.0159981 38.1887933 11.0159981 38.1887933 26.7531381 47.7359916 26.7531381"></polyline>
+                <line x1="23.8679958" y1="0" x2="23.8679958" y2="12.5897121" id="Path"></line>
+                <line id="Path" x1="23.8679958" x2="23.8679958" y1="25.1794241"
+                    y2="37.7691362"></line>
+                <rect height="37.7691362" id="Rectangle" stroke-linecap="square" width="47.7359916"
+                    x="1.7408297e-13" y="-1.37033242e-13"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

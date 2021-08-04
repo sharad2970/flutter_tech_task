@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="24px" version="1.1" viewBox="0 0 32 24" width="32px" xmlns="http://www.w3.org/2000/svg">
+    <title>Group</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero" id="Debit-card-/-Selected"
+            transform="translate(-15.000000, -17.000000)">
+            <g id="Group" transform="translate(15.000000, 17.000000)">
+                <path
+                    d="M29.4456517,23.2826083 L2.05434779,23.2826083 C0.919663028,23.2826083 -1.77635684e-15,22.3629453 -1.77635684e-15,21.2282605 L-1.77635684e-15,2.05434779 C-1.77635684e-15,0.919663028 0.919663028,-2.48689958e-14 2.05434779,-2.48689958e-14 L29.4456517,-2.48689958e-14 C30.5803364,-2.48689958e-14 31.5,0.919663028 31.5,2.05434779 L31.5,21.2282605 C31.5,22.3629453 30.5803364,23.2826083 29.4456517,23.2826083 Z"
+                    fill="#BFDEE0" id="Path"></path>
+                <rect fill="#223E49" height="5.47826078" id="Rectangle" width="31.4999995" x="-1.77635684e-15"
+                    y="4"></rect>
+                <rect fill="#FFFFFF" height="2.73913039" id="Rectangle" width="15.0652171" x="7.10869558"
+                    y="13.6956519"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

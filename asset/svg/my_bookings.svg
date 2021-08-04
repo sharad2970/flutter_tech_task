@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="34px" viewBox="0 0 38 34" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <title>Group 5</title>
+    <g id="GoalOne" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GoalOne-4.0" transform="translate(-45.000000, -287.000000)">
+            <g id="Group-16" transform="translate(30.000000, 276.000000)">
+                <g id="Group-5" transform="translate(16.000000, 11.186441)">
+                    <g id="soccer-field-copy" transform="translate(0.000000, 7.118644)"
+                        stroke-width="1.5">
+                        <ellipse id="Oval" stroke="#000000" stroke-linecap="square" cx="15"
+                            cy="12.2033898" rx="4" ry="4.06779661"></ellipse>
+                        <polyline id="Path" stroke="#000000"
+                            points="0 7.11864407 6 7.11864407 6 17.2881356 0 17.2881356"></polyline>
+                        <polyline id="Path" stroke="#000000"
+                            points="30 7.11864407 24 7.11864407 24 17.2881356 30 17.2881356"></polyline>
+                        <line x1="15" y1="0" x2="15" y2="8.13559322" id="Path"
+                            stroke="#040404"></line>
+                        <line x1="15" y1="16.2711864" x2="15" y2="24.4067797" id="Path"
+                            stroke="#000000"></line>
+                        <rect id="Rectangle" stroke="#000000" stroke-linecap="square" x="0" y="0"
+                            width="30" height="24.4067797"></rect>
+                    </g>
+                    <g id="Group-15-Copy" transform="translate(21.000000, -0.000000)">
+                        <ellipse id="Oval" fill="#3FAE2A" cx="8" cy="8.13559322" rx="8"
+                            ry="8.13559322"></ellipse>
+                        <g id="f-check" transform="translate(4.000000, 5.084746)" fill="#FFFFFF"
+                            fill-rule="nonzero">
+                            <polygon id="Path"
+                                points="2.8 3.81355932 1.2 2.28813559 0 3.43220339 2.8 6.10169492 8 1.1440678 6.8 0"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
