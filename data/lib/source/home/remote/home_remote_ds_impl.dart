@@ -16,6 +16,7 @@ import 'package:data/entity/remote/leagues/upcoming_fixture_request_entity.dart'
 import 'package:data/entity/remote/leagues/upcoming_fixtures_response.dart';
 import 'package:data/network/rest/api_service.dart';
 import 'package:data/source/user/user_data_sources.dart';
+import 'package:domain/constants/api_constant.dart';
 import 'package:domain/constants/enum/booking_type_enum.dart';
 import 'package:domain/model/leagues/create_team_league_request.dart';
 import 'package:domain/model/user.dart';
@@ -31,7 +32,15 @@ class HomeRemoteDSImpl extends HomeRemoteDS {
   HomeRemoteDSImpl(this._apiService, this._userLocalDS);
 
   @override
-  Future<HttpResponse<PopularMoviesResponseEntity>> getPopularMovies() {
-    return _apiService.getPopularMovies();
+  Future<HttpResponse<PopularMoviesResponseEntity>> getPopularMovies({String type}) {
+    if(type == ApiConstant.POPULAR){
+      return _apiService.getPopularMovies();
+    }else if(type == ApiConstant.TOP_RATED){
+      return _apiService.getTopRatedMovies();
+    }else if(type == ApiConstant.LATEST){
+      return _apiService.getLatestMovies();
+    }else{
+      return _apiService.getUpcomingMovies();
+    }
   }
 }

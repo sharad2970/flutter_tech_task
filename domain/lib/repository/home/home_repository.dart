@@ -11,5 +11,5 @@ import 'package:domain/model/leagues/upcoming_fixtures.dart';
 import 'package:domain/model/popular_movies.dart';
 
 abstract class HomeRepository {
-  Future<Either<NetworkError, List<PopularMovies>>> getPopularMovies();
+  Future<Either<NetworkError, List<PopularMovies>>> getPopularMovies({String type});
 }

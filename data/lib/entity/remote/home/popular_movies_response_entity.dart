@@ -28,6 +28,6 @@ class PopularMoviesResponseEntity
 
   @override
   List<PopularMovies> transform() {
-    return this.results.map((e) => e.transform()).toList();
+    return this.results != null ? this.results.map((e) => e.transform()).toList(): [];
   }
 }

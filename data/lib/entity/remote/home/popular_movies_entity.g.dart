@@ -9,13 +9,13 @@ part of 'popular_movies_entity.dart';
 PopularMoviesEntity _$PopularMoviesEntityFromJson(Map<String, dynamic> json) {
   return PopularMoviesEntity(
     json['id'] as int,
-    json['original_name'] as String,
-    json['posterPath'] as String,
-    json['backdropPath'] as String,
+    json['title'] as String,
+    json['poster_path'] as String,
+    json['backdrop_path'] as String,
     json['overview'] as String,
-    (json['voteAverage'] as num)?.toDouble(),
-    json['voteCount'] as int,
-    json['releaseDate'] as String,
+    (json['vote_average'] as num)?.toDouble(),
+    json['vote_count'] as int,
+    json['first_air_date'] as String,
   );
 }
 
@@ -23,11 +23,11 @@ Map<String, dynamic> _$PopularMoviesEntityToJson(
         PopularMoviesEntity instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'original_name': instance.title,
-      'posterPath': instance.posterPath,
-      'backdropPath': instance.backdropPath,
+      'title': instance.title,
+      'poster_path': instance.posterPath,
+      'backdrop_path': instance.backdropPath,
       'overview': instance.overview,
-      'voteAverage': instance.voteAverage,
-      'voteCount': instance.voteCount,
-      'releaseDate': instance.releaseDate,
+      'vote_average': instance.voteAverage,
+      'vote_count': instance.voteCount,
+      'first_air_date': instance.releaseDate,
     };

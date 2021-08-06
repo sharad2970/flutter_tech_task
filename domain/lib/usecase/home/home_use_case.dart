@@ -17,13 +17,14 @@ class HomeUseCase
 
   @override
   Future<Either<NetworkError, List<PopularMovies>>> execute({HomeUseCaseParams params}) {
-    return _repository.getPopularMovies();
+    return _repository.getPopularMovies(type: params.type);
   }
 }
 
 class HomeUseCaseParams extends Params {
+  final String type;
 
-  HomeUseCaseParams();
+  HomeUseCaseParams({this.type});
   @override
   Either<GoalOneAppError, bool> verify() {
     return Right(true);

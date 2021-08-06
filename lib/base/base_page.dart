@@ -85,7 +85,10 @@ abstract class BaseStatefulPage<VM extends BasePageViewModel,
           BoxConstraints(minHeight: MediaQuery.of(context).size.height),
       child: Stack(children: [
         Positioned.fill(
-            child: GoalOneSvg.asset(AssetUtils.background, fit: BoxFit.cover)),
+            // child: GoalOneSvg.asset(AssetUtils.background, fit: BoxFit.cover)),
+            child: Container(
+              color: Colors.white,
+            )),
         buildView(context, model)
       ]),
     );

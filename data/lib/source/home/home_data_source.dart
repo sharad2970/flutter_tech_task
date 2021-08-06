@@ -12,5 +12,5 @@ import 'package:retrofit/retrofit.dart';
 
 abstract class HomeRemoteDS {
 
-  Future<HttpResponse<PopularMoviesResponseEntity>> getPopularMovies();
+  Future<HttpResponse<PopularMoviesResponseEntity>> getPopularMovies({String type});
 }

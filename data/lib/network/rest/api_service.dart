@@ -113,11 +113,11 @@ abstract class ApiService {
 
   @POST("/getPlayerDetailsByOrderId")
   Future<HttpResponse<OrderDetailPaymentsResponseEntity>>
-      getOrderDetailsPayment({@Body() Map<String, dynamic> body});
+  getOrderDetailsPayment({@Body() Map<String, dynamic> body});
 
   @POST("/getPendingPaymentDetails")
   Future<HttpResponse<OrderDetailPendingPaymentsResponseEntity>>
-      getOrderPendingPayment({@Body() Map<String, dynamic> body});
+  getOrderPendingPayment({@Body() Map<String, dynamic> body});
 
   @POST("/acceptBuddyRequest")
   Future<HttpResponse<AcceptBuddyResponseEntity>> acceptBuddyRequest(
@@ -209,7 +209,7 @@ abstract class ApiService {
 
   @POST("/SetPaymentMethodByOrderID")
   Future<HttpResponse<UpdateSplitPaymentStatusResponse>>
-      updateSplitPaymentStatus({@Body() UpdateSplitPaymentRequest request});
+  updateSplitPaymentStatus({@Body() UpdateSplitPaymentRequest request});
 
   @POST("/userDelete")
   Future<HttpResponse<DeleteAccountResponse>> deleteAccountApiCall(
@@ -252,13 +252,12 @@ abstract class ApiService {
 
   @POST("/getRuleByLeague")
   Future<HttpResponse<RulesAndRegulationsResponse>>
-      getRulesAndRegulationsForLeague(
-          {@Body() RulesAndRegulationsRequest request});
+  getRulesAndRegulationsForLeague({@Body() RulesAndRegulationsRequest request});
 
   @POST("/getRuleByKnockout")
   Future<HttpResponse<RulesAndRegulationsResponse>>
-      getRulesAndRegulationsForKnockout(
-          {@Body() RulesAndRegulationsRequest request});
+  getRulesAndRegulationsForKnockout(
+      {@Body() RulesAndRegulationsRequest request});
 
   @POST("/addBuddyToTeam")
   Future<HttpResponse<CreateLeagueTeamResponse>> addBuddiesToLeagueTeam(
@@ -305,6 +304,15 @@ abstract class ApiService {
       {@Body() Map<String, dynamic> body});
 
 
-  @GET("/3/tv/popular?api_key=671ea541a469d6ebded23881e9323133&language=en-US&page=1")
+  @GET("/3/movie/popular?api_key=671ea541a469d6ebded23881e9323133&language=en-US&page=1")
   Future<HttpResponse<PopularMoviesResponseEntity>> getPopularMovies();
+
+  @GET("/3/movie/top_rated?api_key=671ea541a469d6ebded23881e9323133&language=en-US&page=1")
+  Future<HttpResponse<PopularMoviesResponseEntity>> getTopRatedMovies();
+
+  @GET("/3/movie/upcoming?api_key=671ea541a469d6ebded23881e9323133&language=en-US&page=1")
+  Future<HttpResponse<PopularMoviesResponseEntity>> getUpcomingMovies();
+  @GET("/3/movie/latest?api_key=671ea541a469d6ebded23881e9323133&language=en-US&page=1")
+  Future<HttpResponse<PopularMoviesResponseEntity>> getLatestMovies();
+
 }

@@ -27,8 +27,8 @@ class HomeRepositoryImpl extends HomeRepository {
   }
 
   @override
-  Future<Either<NetworkError, List<PopularMovies>>> getPopularMovies() async {
-    final response = await safeApiCall(_remoteDS.getPopularMovies());
+  Future<Either<NetworkError, List<PopularMovies>>> getPopularMovies({String type}) async {
+    final response = await safeApiCall(_remoteDS.getPopularMovies(type: type));
     return response.fold((l) => Left(l), (r) {
       return Right(
         r.data.transform(),

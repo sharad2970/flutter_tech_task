@@ -45,7 +45,8 @@ dependencies:
   animated_theme_switcher: ^1.0.5
   package_info: ^2.0.0
   cached_network_image: ^2.0.0
-
+  drag_and_drop_lists: ^0.3.2
+  carousel_slider: ^2.3.1
 
 
   # The following adds the Cupertino Icons font to your application.

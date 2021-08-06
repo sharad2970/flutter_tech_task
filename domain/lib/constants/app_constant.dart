@@ -35,4 +35,8 @@ class Constant {
   static const String L = 'L';
   static const String GD = 'GD';
   static const String SYMBOL_HASH = '#';
+
+  // static const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w185';
+  static const BASE_IMAGE_URL_500 = 'https://image.tmdb.org/t/p/w500';
+  static const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/original';
 }

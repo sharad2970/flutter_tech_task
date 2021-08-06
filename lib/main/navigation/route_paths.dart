@@ -55,4 +55,6 @@ class RoutePaths {
   static const String InvitedPlayers = "/invitedPlayers";
   static const String KnockoutDetails = "/knockoutDetails";
   static const String KnockoutDetailsInvitePlayers = "/knockoutInvitedPlayers";
+
+  static const String movieDetails = "/movieDetails";
 }

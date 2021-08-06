@@ -21,31 +21,6 @@ class _HomePageState
   ProviderBase provideBase() => homeViewModelProvider;
 
   @override
-  Widget buildAppbar() {
-    return AppBar(
-      leading: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(30, 20, 0, 0),
-          child: InkWell(
-
-            child: GoalOneSvg.asset(AssetUtils.home, width: 38, height: 38),
-            onTap: () {
-              if (Navigator.canPop(context)) {
-                exitPage();
-              }else{
-                Navigator.pushNamedAndRemoveUntil(
-                  context,
-                  RoutePaths.Home,
-                  ModalRoute.withName(RoutePaths.Home),
-                );
-              }
-            },
-          )),
-      backgroundColor: GoalOneColor.white,
-      elevation: 0.0,
-    );
-  }
-
-  @override
   Widget buildView(BuildContext context, model) {
     return HomePageView(provideBase());
   }

@@ -10,19 +10,19 @@ class PopularMoviesEntity
 
   @JsonKey(name: 'id')
   final int id;
-  @JsonKey(name: 'original_name')
+  @JsonKey(name: 'title')
   final String title;
-  @JsonKey(name: 'posterPath')
+  @JsonKey(name: 'poster_path')
   final String posterPath;
-  @JsonKey(name: 'backdropPath')
+  @JsonKey(name: 'backdrop_path')
   final String backdropPath;
   @JsonKey(name: 'overview')
   final String overview;
-  @JsonKey(name: 'voteAverage')
+  @JsonKey(name: 'vote_average')
   final double voteAverage;
-  @JsonKey(name: 'voteCount')
+  @JsonKey(name: 'vote_count')
   final int voteCount;
-  @JsonKey(name: 'releaseDate')
+  @JsonKey(name: 'first_air_date')
   final String releaseDate;
 
   PopularMoviesEntity(
