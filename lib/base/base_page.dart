@@ -1,18 +1,14 @@
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
-import 'package:domain/constants/goal_one_errors.dart';
-import 'package:domain/error/goal_one_error.dart';
+import 'package:domain/constants/app_errors.dart';
+import 'package:domain/error/base_app_error.dart';
 import 'package:domain/model/base/error_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_base/base/base_page_view_model.dart';
 import 'package:flutter_base/base/base_widget.dart';
 import 'package:flutter_base/generated/l10n.dart';
-import 'package:flutter_base/main/navigation/route_paths.dart';
-import 'package:flutter_base/ui/molecule/goal_one_svg.dart';
-import 'package:flutter_base/utils/asset_utils.dart';
 import 'package:flutter_base/utils/extensions/base_page_extensions.dart';
 import 'package:flutter_base/utils/parser/error_parser.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// Every Page/View should be inherited from this
 abstract class BasePage<VM extends BasePageViewModel> extends StatefulWidget {
@@ -33,15 +29,14 @@ abstract class BaseStatefulPage<VM extends BasePageViewModel,
 
   @override
   Widget build(BuildContext context) {
-    return  _getLayout();
-
+    return _getLayout();
   }
 
   /// Returns viewModel of the screen
   VM getViewModel() {
     return attached
         ? _viewModel
-        : throw GoalOneAppError(
+        : throw BaseAppError(
             throwable: Exception("View model is not attached"),
             error: ErrorInfo(message: "View Model is not attached"),
             type: ErrorType.UI,
@@ -85,10 +80,9 @@ abstract class BaseStatefulPage<VM extends BasePageViewModel,
           BoxConstraints(minHeight: MediaQuery.of(context).size.height),
       child: Stack(children: [
         Positioned.fill(
-            // child: GoalOneSvg.asset(AssetUtils.background, fit: BoxFit.cover)),
             child: Container(
-              color: Colors.white,
-            )),
+          color: Colors.white,
+        )),
         buildView(context, model)
       ]),
     );

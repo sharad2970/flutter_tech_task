@@ -20,9 +20,11 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static _notInlinedMessages(_) => <String, Function> {
-    "appName" : MessageLookupByLibrary.simpleMessage("Flutter"),
-    "login" : MessageLookupByLibrary.simpleMessage("Log in"),
-    "unexpectedError" : MessageLookupByLibrary.simpleMessage("Encountered unexpected error.")
-  };
+
+  static _notInlinedMessages(_) => <String, Function>{
+        "appName": MessageLookupByLibrary.simpleMessage("Flutter"),
+        "login": MessageLookupByLibrary.simpleMessage("Log in"),
+        "unexpectedError": MessageLookupByLibrary.simpleMessage(
+            "Encountered unexpected error.")
+      };
 }

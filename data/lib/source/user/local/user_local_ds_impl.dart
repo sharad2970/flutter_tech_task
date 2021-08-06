@@ -1,4 +1,4 @@
-import 'package:data/db/exception/goal_one_exception.dart';
+import 'package:data/db/exception/db_exception.dart';
 import 'package:data/db/floor/app_database.dart';
 import 'package:data/db/floor/floor_db_service.dart';
 import 'package:data/entity/local/user_db_entity.dart';
@@ -24,8 +24,8 @@ class UserLocalDSImpl extends UserLocalDS {
     UserDBEntity userDBEntity =
         await (await _getAppDatabase()).userDao.getCurrentUser();
     if (userDBEntity == null) {
-      throw GoalOneLocalException(
-        goalOneExceptionType: GoalOneLocalExceptionType.NO_USER_FOUND,
+      throw DbLocalException(
+        dbExceptionType: DbLocalExceptionType.NO_USER_FOUND,
       );
     }
 
@@ -55,6 +55,4 @@ class UserLocalDSImpl extends UserLocalDS {
     userDBEntity.language = locale.toString();
     return await saveCurrentUser(userDBEntity);
   }
-
-
 }

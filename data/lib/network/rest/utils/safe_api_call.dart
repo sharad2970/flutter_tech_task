@@ -17,7 +17,7 @@ Future<Either<NetworkError, T>> safeApiCall<T>(Future<T> apiCall) async {
       return Right(originalResponse);
     }
   } catch (throwable) {
-     print(throwable.toString());
+    print(throwable.toString());
     switch (throwable.runtimeType) {
       case DioError:
         switch ((throwable).type) {
@@ -48,7 +48,6 @@ Future<Either<NetworkError, T>> safeApiCall<T>(Future<T> apiCall) async {
                   cause: throwable),
             );
         }
-
         break;
 
       case IOException:

@@ -8,7 +8,7 @@ Widget circularProgressIndicator() {
       width: 50,
       child: const CircularProgressIndicator(
           valueColor: AlwaysStoppedAnimation<Color>(
-            GoalOneColor.grass,
+            AppColor.grass,
           ),
           strokeWidth: 4.0),
     ),

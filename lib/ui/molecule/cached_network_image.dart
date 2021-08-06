@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/utils/asset_utils.dart';
 import 'package:flutter_base/utils/color_utils.dart';
 
-import 'goal_one_svg.dart';
+import 'app_svg.dart';
 
 class CatchNetworkImage extends StatelessWidget {
   final String iconUrl;
@@ -31,9 +31,9 @@ class CatchNetworkImage extends StatelessWidget {
           child: Center(
             child: CircularProgressIndicator(
               strokeWidth: 1,
-              backgroundColor: GoalOneColor.grass,
+              backgroundColor: AppColor.grass,
               valueColor: new AlwaysStoppedAnimation<Color>(
-                GoalOneColor.white,
+                AppColor.white,
               ),
             ),
           ),
@@ -41,10 +41,10 @@ class CatchNetworkImage extends StatelessWidget {
         errorWidget: (context, url, error) => Container(
           width: width,
           height: height,
-          child: GoalOneSvg.asset(AssetUtils.profile,
+          child: AppSvg.asset(AssetUtils.profile,
               width: 96.0,
               height: 96.0,
-              color: isImageDisabled ? GoalOneColor.coolGrey : GoalOneColor.black),
+              color: isImageDisabled ? AppColor.coolGrey : AppColor.black),
         ),
         imageBuilder: isImageCircular
             ? (context, imageProvider) => CircleAvatar(

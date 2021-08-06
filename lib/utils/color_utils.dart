@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class GoalOneColor {
-  GoalOneColor._();
+class AppColor {
+  AppColor._();
 
   static const grass = const Color(0xff3fae2a);
   static const white = const Color(0xffffffff);

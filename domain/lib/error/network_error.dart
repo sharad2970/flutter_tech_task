@@ -1,6 +1,6 @@
-import 'package:domain/constants/goal_one_errors.dart';
+import 'package:domain/constants/app_errors.dart';
+import 'package:domain/error/base_app_error.dart';
 import 'package:domain/error/base_error.dart';
-import 'package:domain/error/goal_one_error.dart';
 import 'package:domain/model/base/error_info.dart';
 import 'package:flutter/foundation.dart';
 
@@ -17,28 +17,28 @@ class NetworkError extends BaseError {
   }
 
   @override
-  GoalOneAppError transform() {
+  BaseAppError transform() {
     switch (error.code) {
       case 503:
-        return GoalOneAppError(
+        return BaseAppError(
             error: error,
             throwable: cause,
             type: ErrorType.NET_NO_INTERNET_CONNECTION);
 
       case 504:
-        return GoalOneAppError(
+        return BaseAppError(
             throwable: cause, error: error, type: ErrorType.NET_SERVER_MESSAGE);
 
       case 502:
-        return GoalOneAppError(
+        return BaseAppError(
             throwable: cause, error: error, type: ErrorType.NET_SERVER_MESSAGE);
 
       case 404:
-        return GoalOneAppError(
+        return BaseAppError(
             throwable: cause, error: error, type: ErrorType.NET_SERVER_MESSAGE);
 
       default:
-        return GoalOneAppError(
+        return BaseAppError(
             throwable: cause, error: error, type: ErrorType.NETWORK);
     }
   }

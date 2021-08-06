@@ -1,13 +1,12 @@
-import 'package:domain/model/leagues/leagues.dart';
+import 'package:domain/model/home/popular_movies.dart';
 import 'package:domain/utils/mapper/base_layer_data_transformer.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:domain/model/popular_movies.dart';
+
 part 'popular_movies_entity.g.dart';
 
 @JsonSerializable()
 class PopularMoviesEntity
     implements BaseLayerDataTransformer<PopularMoviesEntity, PopularMovies> {
-
   @JsonKey(name: 'id')
   final int id;
   @JsonKey(name: 'title')
@@ -25,15 +24,8 @@ class PopularMoviesEntity
   @JsonKey(name: 'first_air_date')
   final String releaseDate;
 
-  PopularMoviesEntity(
-      this.id,
-      this.title,
-      this.posterPath,
-      this.backdropPath,
-      this.overview,
-      this.voteAverage,
-      this.voteCount,
-      this.releaseDate);
+  PopularMoviesEntity(this.id, this.title, this.posterPath, this.backdropPath,
+      this.overview, this.voteAverage, this.voteCount, this.releaseDate);
 
   factory PopularMoviesEntity.fromJson(Map<String, dynamic> json) =>
       _$PopularMoviesEntityFromJson(json);
@@ -48,11 +40,11 @@ class PopularMoviesEntity
   @override
   PopularMovies transform() {
     return PopularMovies(
-        id: this.id,
-        title: this.title,
+        id: this.id ?? -1,
+        title: this.title ?? '',
         posterPath: this.posterPath,
         backdropPath: this.backdropPath,
-        overview: this.overview,
+        overview: this.overview ?? '',
         voteAverage: this.voteAverage,
         voteCount: this.voteCount,
         releaseDate: this.releaseDate);

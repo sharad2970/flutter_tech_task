@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:domain/error/goal_one_error.dart';
+import 'package:domain/error/base_app_error.dart';
 
 abstract class Params {
-  Either<GoalOneAppError, bool> verify();
+  Either<BaseAppError, bool> verify();
 }

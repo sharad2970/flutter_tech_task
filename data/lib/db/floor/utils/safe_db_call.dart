@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:data/db/exception/goal_one_exception.dart';
+import 'package:data/db/exception/db_exception.dart';
 import 'package:domain/error/database_error.dart';
 import 'package:flutter/services.dart';
 
@@ -9,14 +9,14 @@ Future<Either<DatabaseError, T>> safeDbCall<T>(Future<T> dbCall) async {
     return Right(originalResponse);
   } catch (exception) {
     switch (exception.runtimeType) {
-      case GoalOneLocalException:
-        if (exception is GoalOneLocalException) {
-          switch (exception.goalOneExceptionType) {
-            case GoalOneLocalExceptionType.NO_USER_FOUND:
+      case DbLocalException:
+        if (exception is DbLocalException) {
+          switch (exception.dbExceptionType) {
+            case DbLocalExceptionType.NO_USER_FOUND:
               return Left(
                 DatabaseError(
                   message: exception.toString(),
-                  databaseError: exception.goalOneExceptionType.value,
+                  databaseError: exception.dbExceptionType.value,
                   // Should be error as per the case
                   cause: Exception(exception.toString()),
                 ),

@@ -12,5 +12,3 @@ class LanguageEnum {
   static const LanguageEnum ARABIC = LanguageEnum._('ar');
   static const LanguageEnum NONE = LanguageEnum._('none');
 }
-
-

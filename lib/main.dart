@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_base/main/app.dart';
 import 'package:flutter_base/utils/color_utils.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: GoalOneColor.black,
+    statusBarColor: AppColor.black,
   ));
   runApp(ProviderScope(child: MyApp()));
 }

@@ -4,19 +4,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_base/base/base_view_model.dart';
 import 'package:flutter_base/utils/color_utils.dart';
 
-
 GlobalKey<NavigatorState> appLevelKey = GlobalKey(debugLabel: 'app-key');
 
 class AppViewModel extends BaseViewModel {
   ThemeData _themeData = ThemeData();
-  GoalOneTheme _goalOneTheme = GoalOneTheme.light;
+  AppTheme _appTheme = AppTheme.light;
 
-  GoalOneTheme get goalOneTheme => _goalOneTheme;
-
+  AppTheme get appTheme => _appTheme;
 
   Locale _currentLocale = Locale('en');
 
   Locale get currentLocale => _currentLocale;
+
+  AppViewModel();
 
   void toggleLocale(LanguageEnum locale) {
     print("toggleLocale $locale");
@@ -26,48 +26,46 @@ class AppViewModel extends BaseViewModel {
 
   ThemeData get themeData {
     // based on platform WidgetsBinding.instance.window.platformBrightness
-    switch (_goalOneTheme) {
-      case GoalOneTheme.dark:
+    switch (_appTheme) {
+      case AppTheme.dark:
         _themeData = _themeData.copyWith(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: GoalOneColor.white,
-          accentColor: GoalOneColor.darkBlueGrey,
-          primaryColor: GoalOneColor.grass,
-          appBarTheme: AppBarTheme(color: GoalOneColor.white, elevation: 0),
-          primaryColorDark: GoalOneColor.darkBlueGreen,
+          scaffoldBackgroundColor: AppColor.white,
+          accentColor: AppColor.darkBlueGrey,
+          primaryColor: AppColor.grass,
+          appBarTheme: AppBarTheme(color: AppColor.white, elevation: 0),
+          primaryColorDark: AppColor.darkBlueGreen,
           textSelectionTheme: TextSelectionThemeData(
-            cursorColor: GoalOneColor.grass,
-            selectionHandleColor: GoalOneColor.grass,
-            selectionColor: GoalOneColor.pinkishGreyTwo,
+            cursorColor: AppColor.grass,
+            selectionHandleColor: AppColor.grass,
+            selectionColor: AppColor.pinkishGreyTwo,
           ),
           inputDecorationTheme: InputDecorationTheme(
               hintStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.pinkishGrey,
+                color: AppColor.pinkishGrey,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal,
               ),
-              fillColor: GoalOneColor.white,
+              fillColor: AppColor.white,
               filled: true,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide:
-                      BorderSide(color: GoalOneColor.pinkishGrey, width: 1)),
+                      BorderSide(color: AppColor.pinkishGrey, width: 1)),
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide: BorderSide(color: GoalOneColor.grass, width: 1)),
+                  borderSide: BorderSide(color: AppColor.grass, width: 1)),
               errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide:
-                      BorderSide(color: GoalOneColor.orangeRed, width: 1)),
+                  borderSide: BorderSide(color: AppColor.orangeRed, width: 1)),
               focusedErrorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide:
-                      BorderSide(color: GoalOneColor.orangeRed, width: 1)),
+                  borderSide: BorderSide(color: AppColor.orangeRed, width: 1)),
               errorStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.orangeRed,
+                color: AppColor.orangeRed,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 fontStyle: FontStyle.normal,
@@ -75,7 +73,7 @@ class AppViewModel extends BaseViewModel {
               ),
               labelStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.greyishBrown,
+                color: AppColor.greyishBrown,
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
                 fontStyle: FontStyle.normal,
@@ -83,20 +81,20 @@ class AppViewModel extends BaseViewModel {
               )),
           textTheme: _themeData.textTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           accentTextTheme: _themeData.accentTextTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           primaryTextTheme: _themeData.primaryTextTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           iconTheme: IconThemeData(
-            color: GoalOneColor.blackTwo,
+            color: AppColor.blackTwo,
           ),
-          indicatorColor: GoalOneColor.white,
+          indicatorColor: AppColor.white,
           buttonTheme: ButtonThemeData(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -104,47 +102,45 @@ class AppViewModel extends BaseViewModel {
           ),
         );
         break;
-      case GoalOneTheme.light:
+      case AppTheme.light:
         _themeData = _themeData.copyWith(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: GoalOneColor.white,
-          accentColor: GoalOneColor.darkBlueGrey,
-          primaryColor: GoalOneColor.grass,
-          appBarTheme: AppBarTheme(color: GoalOneColor.white, elevation: 0),
-          primaryColorDark: GoalOneColor.darkBlueGreen,
+          scaffoldBackgroundColor: AppColor.white,
+          accentColor: AppColor.darkBlueGrey,
+          primaryColor: AppColor.grass,
+          appBarTheme: AppBarTheme(color: AppColor.white, elevation: 0),
+          primaryColorDark: AppColor.darkBlueGreen,
           textSelectionTheme: TextSelectionThemeData(
-            cursorColor: GoalOneColor.grass,
-            selectionHandleColor: GoalOneColor.grass,
-            selectionColor: GoalOneColor.pinkishGreyTwo,
+            cursorColor: AppColor.grass,
+            selectionHandleColor: AppColor.grass,
+            selectionColor: AppColor.pinkishGreyTwo,
           ),
           inputDecorationTheme: InputDecorationTheme(
               hintStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.pinkishGrey,
+                color: AppColor.pinkishGrey,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal,
               ),
-              fillColor: GoalOneColor.white,
+              fillColor: AppColor.white,
               filled: true,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide:
-                      BorderSide(color: GoalOneColor.pinkishGrey, width: 1)),
+                      BorderSide(color: AppColor.pinkishGrey, width: 1)),
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide: BorderSide(color: GoalOneColor.grass, width: 1)),
+                  borderSide: BorderSide(color: AppColor.grass, width: 1)),
               errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide:
-                      BorderSide(color: GoalOneColor.orangeRed, width: 1)),
+                  borderSide: BorderSide(color: AppColor.orangeRed, width: 1)),
               focusedErrorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
-                  borderSide:
-                      BorderSide(color: GoalOneColor.orangeRed, width: 1)),
+                  borderSide: BorderSide(color: AppColor.orangeRed, width: 1)),
               errorStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.orangeRed,
+                color: AppColor.orangeRed,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 fontStyle: FontStyle.normal,
@@ -152,7 +148,7 @@ class AppViewModel extends BaseViewModel {
               ),
               labelStyle: TextStyle(
                 fontFamily: 'Montserrat',
-                color: GoalOneColor.greyishBrown,
+                color: AppColor.greyishBrown,
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
                 fontStyle: FontStyle.normal,
@@ -160,20 +156,20 @@ class AppViewModel extends BaseViewModel {
               )),
           textTheme: _themeData.textTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           accentTextTheme: _themeData.accentTextTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           primaryTextTheme: _themeData.primaryTextTheme.apply(
               fontFamily: 'Montserrat',
-              bodyColor: GoalOneColor.white,
-              displayColor: GoalOneColor.white),
+              bodyColor: AppColor.white,
+              displayColor: AppColor.white),
           iconTheme: IconThemeData(
-            color: GoalOneColor.blackTwo,
+            color: AppColor.blackTwo,
           ),
-          indicatorColor: GoalOneColor.white,
+          indicatorColor: AppColor.white,
           buttonTheme: ButtonThemeData(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -187,19 +183,13 @@ class AppViewModel extends BaseViewModel {
   }
 
   ThemeData toggleTheme() {
-    if (_goalOneTheme == GoalOneTheme.dark) {
-      _goalOneTheme = GoalOneTheme.light;
+    if (_appTheme == AppTheme.dark) {
+      _appTheme = AppTheme.light;
     } else {
-      _goalOneTheme = GoalOneTheme.dark;
+      _appTheme = AppTheme.dark;
     }
     return themeData;
   }
-
-
-
-  AppViewModel() {}
-
-
 
   @override
   void dispose() {
@@ -208,7 +198,7 @@ class AppViewModel extends BaseViewModel {
   }
 }
 
-enum GoalOneTheme {
+enum AppTheme {
   dark,
   light,
 }

@@ -6,7 +6,6 @@ class DateUtil {
   /// get formatted date
   static String getFormattedDate(
       {DateTime inputDate, String format = "dd/MM/yyyy"}) {
-    // final DateTime now = DateTime.now();
     var now = DateTime.now();
     now = inputDate;
     try {
@@ -27,9 +26,7 @@ class DateUtil {
       Duration addDuration,
       Duration subtractDuration,
       String format = "HH:MM"}) {
-    // final DateTime now = DateTime.now();
     var now = DateTime.now();
-    // now = inputDate;
     try {
       now = DateTime(hour);
       now.add(addDuration);

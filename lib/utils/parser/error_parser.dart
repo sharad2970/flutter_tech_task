@@ -1,5 +1,5 @@
-import 'package:domain/constants/goal_one_errors.dart';
-import 'package:domain/error/goal_one_error.dart';
+import 'package:domain/constants/app_errors.dart';
+import 'package:domain/error/base_app_error.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_base/generated/l10n.dart';
 
@@ -7,7 +7,7 @@ class ErrorParser {
   ErrorParser._();
 
   static String getLocalisedStringError(
-      {@required GoalOneAppError error, @required S localisedHelper}) {
+      {@required BaseAppError error, @required S localisedHelper}) {
     if (error == null || error.type == null) return "";
     switch (error.type) {
       case ErrorType.IOEXCEPTION:

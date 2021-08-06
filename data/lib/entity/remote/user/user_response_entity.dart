@@ -1,5 +1,5 @@
 import 'package:data/entity/remote/user/user_entity.dart';
-import 'package:domain/model/user.dart';
+import 'package:domain/model/user/user.dart';
 import 'package:domain/utils/mapper/base_layer_data_transformer.dart';
 import 'package:json_annotation/json_annotation.dart';
 

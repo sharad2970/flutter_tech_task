@@ -8,7 +8,7 @@ class StyleManager {
 
   /// This is the style for the header green text of the app
   static TextStyle headerTextStyle = TextStyle(
-      color: GoalOneColor.grass, fontSize: 28.0, fontWeight: FontWeight.w800);
+      color: AppColor.grass, fontSize: 28.0, fontWeight: FontWeight.w800);
 
   /// This is the style for the general black text of the app. It is customizable by providing
   /// font weight and font size parameter.
@@ -17,7 +17,7 @@ class StyleManager {
       double fontSize = 16.0,
       TextDecoration decoration}) {
     return TextStyle(
-      color: GoalOneColor.black,
+      color: AppColor.black,
       fontSize: fontSize,
       fontWeight: fontWeight,
       decoration: decoration,
@@ -30,7 +30,7 @@ class StyleManager {
       double fontSize = 16.0,
       TextDecoration decoration}) {
     return TextStyle(
-      color: GoalOneColor.coolGrey,
+      color: AppColor.coolGrey,
       fontSize: fontSize,
       fontWeight: fontWeight,
       decoration: decoration,
@@ -44,7 +44,7 @@ class StyleManager {
       double lineHeight,
       TextDecoration decoration}) {
     return TextStyle(
-        color: GoalOneColor.white,
+        color: AppColor.white,
         fontSize: fontSize,
         height: lineHeight,
         decoration: decoration,
@@ -58,7 +58,7 @@ class StyleManager {
       double lineHeight,
       TextDecoration decoration}) {
     return TextStyle(
-        color: GoalOneColor.grass,
+        color: AppColor.grass,
         fontSize: fontSize,
         height: lineHeight,
         decoration: decoration,
@@ -72,7 +72,7 @@ class StyleManager {
       double lineHeight,
       TextDecoration decoration}) {
     return TextStyle(
-        color: GoalOneColor.orangeRed,
+        color: AppColor.orangeRed,
         fontSize: fontSize,
         height: lineHeight,
         decoration: decoration,

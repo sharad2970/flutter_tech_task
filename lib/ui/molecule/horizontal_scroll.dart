@@ -27,10 +27,9 @@ class HorizontalScrollView extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black
-                ),
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black),
               ),
               GestureDetector(
                 onTap: () => print('View $title'),
@@ -46,7 +45,7 @@ class HorizontalScrollView extends StatelessWidget {
         Container(
           height: imageHeight,
           child: ListView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
             scrollDirection: Axis.horizontal,
             itemCount: images.length,
             itemBuilder: (BuildContext context, int index) {
@@ -67,13 +66,12 @@ class HorizontalScrollView extends StatelessWidget {
                   ],
                 ),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
-                  child: CatchNetworkImage(
-                    iconUrl: StringUtil.getImageUrl500(images[index]),
-                    width: imageHeight,
-                    height: imageWidth,
-                  )
-                ),
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: CatchNetworkImage(
+                      iconUrl: StringUtil.getImageUrl500(images[index]),
+                      width: imageHeight,
+                      height: imageWidth,
+                    )),
               );
             },
           ),

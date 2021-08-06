@@ -1,16 +1,15 @@
 import 'package:data/entity/remote/home/popular_movies_entity.dart';
-import 'package:data/entity/remote/leagues/league_list_info_entity.dart';
-import 'package:domain/model/leagues/league_list_info.dart';
+import 'package:domain/model/home/popular_movies.dart';
 import 'package:domain/utils/mapper/base_layer_data_transformer.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:domain/model/popular_movies.dart';
 
 part 'popular_movies_response_entity.g.dart';
 
 @JsonSerializable()
 class PopularMoviesResponseEntity
     implements
-        BaseLayerDataTransformer<PopularMoviesResponseEntity, List<PopularMovies>> {
+        BaseLayerDataTransformer<PopularMoviesResponseEntity,
+            List<PopularMovies>> {
   @JsonKey(name: 'results')
   List<PopularMoviesEntity> results;
 
@@ -28,6 +27,8 @@ class PopularMoviesResponseEntity
 
   @override
   List<PopularMovies> transform() {
-    return this.results != null ? this.results.map((e) => e.transform()).toList(): [];
+    return this.results != null
+        ? this.results.map((e) => e.transform()).toList()
+        : [];
   }
 }

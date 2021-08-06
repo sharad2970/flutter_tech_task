@@ -1,6 +1,6 @@
 import 'package:data/db/floor/constants/database_tables.dart';
 import 'package:domain/constants/enum/language_enum.dart';
-import 'package:domain/model/user.dart';
+import 'package:domain/model/user/user.dart';
 import 'package:domain/utils/mapper/base_layer_data_transformer.dart';
 import 'package:floor/floor.dart';
 
